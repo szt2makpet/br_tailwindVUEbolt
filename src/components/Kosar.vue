@@ -98,7 +98,7 @@ const rendeles = () => {
 }
 
 .quantity-button {
-  background-color: #006400;
+  background-color: black;
   color: white;
   border: none;
   padding: 4px 8px;
