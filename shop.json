@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone Galaxy 5",
+      "price": "800000",
+      "img": "no-image.png"
+    },
+    {
+      "id": "2",
+      "name": "iPhone X",
+      "price": "45000",
+      "img": "no-image.png"
+    },
+    {
+      "id": "3",
+      "name": "iPhone XR",
+      "price": "25000",
+      "img": "no-image.png"
+    },
+    {
+      "id": "4",
+      "name": "iPhone XS",
+      "price": "75000",
+      "img": "no-image.png"
+    },
+    {
+      "id": "5",
+      "name": "iPhone SE",
+      "price": "211000"
+    },
+    {
+      "id": "6",
+      "name": "iPhone 7",
+      "price": "50000"
+    }
+  ],
+  "order": [
+    {
+      "id": "1",
+      "datum": "2024-01-31",
+      "pId": "1",
+      "quantity": "2",
+      "uId": "2"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "Looser",
+      "email": "cim@domain.hu",
+      "address": "Bújócska utca kavics után jobbra"
+    },
+    {
+      "id": "2",
+      "name": "Winner",
+      "email": "victory@domain.org",
+      "address": "Ahol megtalálsz"
+    }
+  ],
+  "cart": []
+}
