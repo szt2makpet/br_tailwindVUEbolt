@@ -23,7 +23,7 @@ const del = (id) => {
     .then(() => letoltes())
 }
 
-const incrementQuantity = (id) => {
+const novekves = (id) => {
   const productIndex = names.value.findIndex(item => item.id === id);
   if (productIndex !== -1) {
     names.value[productIndex].quantity++;
@@ -31,7 +31,7 @@ const incrementQuantity = (id) => {
   }
 }
 
-const decrementQuantity = (id) => {
+const csokkent = (id) => {
   const productIndex = names.value.findIndex(item => item.id === id);
   if (productIndex !== -1) {
     names.value[productIndex].quantity = Math.max(names.value[productIndex].quantity - 1, 0);
@@ -70,11 +70,11 @@ const rendeles = () => {
           <td class="py-2">Terméknév: {{ n.name }}</td>
           <td class="py-2">Ár: {{ n.price }}</td>
           <td class="py-2 flex items-center">
-            <button class="quantity-button" @click="decrementQuantity(n.id)">-</button>
+            <button class="quantity-button" @click="csokkent(n.id)">-</button>
             <span class="mx-2">Mennyiség: {{ n.quantity }}</span>
-            <button class="quantity-button" @click="incrementQuantity(n.id)">+</button>
+            <button class="quantity-button" @click="novekves(n.id)">+</button>
           </td>
-          <td class="py-2"><span class="spanclass cursor-pointer" @click="del(n.id)"><i class="fa-solid fa-trash"></i></span></td>
+          <td class="py-2"><span class="btn_add_minus cursor-pointer" @click="del(n.id)"><i class="fa-solid fa-trash"></i></span></td>
         </tr>
       </table>
       <button class="Neumorphism mt-4" @click="rendeles()">Rendelés</button>
@@ -106,7 +106,7 @@ const rendeles = () => {
   cursor: pointer;
 }
 
-.spanclass {
+.btn_add_minus {
   color: #ff0000;
   font-size: 1.2rem;
 }

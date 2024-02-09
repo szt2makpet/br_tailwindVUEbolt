@@ -7,7 +7,7 @@
           <h3 class="text-2xl font-bold text-gray-900">{{ product.name }}</h3>
           <p class="mt-2 text-xl font-bold text-gray-900">Ár: {{ product.price }}</p>
           <div class="mt-4 space-x-4">
-            <button class="button Neumorphism font-bold text-gray-900" @click="viewDetails(product)">Részletek</button>
+            <button class="button Neumorphism font-bold text-gray-900">Részletek</button>
             <button class="Neumorphism font-bold text-gray-900" @click="addToCart(product)">Kosárba</button>
           </div>
         </div>
