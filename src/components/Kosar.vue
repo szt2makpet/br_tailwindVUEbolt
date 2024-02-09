@@ -57,7 +57,11 @@ const rendeles = () => {
   alert("Sikeres rendelés!");
   fetch("http://localhost:3000/cart", {
     method: "DELETE",
-  })
+  }).then(() => {
+    window.location.href = "http://localhost:5173/"; 
+  }).catch(error => {
+    console.error("Hiba történt a rendelés törlése során:", error);
+  });
 }
 </script>
 
