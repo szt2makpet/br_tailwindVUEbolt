@@ -4,11 +4,20 @@
   const name = ref("");
   const ar = ref("");
 
+  
+  const lekerdezes = () => {
+    fetch('http://localhost:3000/products')
+    .then(resp => resp.json())
+    .then(json => {
+      names.value = json;
+    })
+  }
+
   const save = () => {
     console.log(name.value);
     let tombMerete = names.value.length;
     let id = Number(names.value[tombMerete - 1].id);
-    let d = {id: name.id, name : name.value, price: ar.value};
+    let d = {id: id++, name : name.value, price: ar.value};
     console.log(d);    
     fetch("http://localhost:3000/products",
     {
@@ -18,19 +27,12 @@
         "Content-type" : "application/json"
       }
     })
-    .then(() => letoltes())
+    .then(() => lekerdezes())
     alert("Sikeres mentés!")
-  }
-  const letoltes = () => {
-    fetch('http://localhost:3000/products')
-    .then(resp => resp.json())
-    .then(json => {
-      names.value = json;
-    })
   }
 
   onMounted(() => {
-    letoltes();
+    lekerdezes();
   }) 
 </script>
 

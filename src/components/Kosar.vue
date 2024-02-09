@@ -4,23 +4,15 @@ import { onMounted, ref } from 'vue';
 
 const names = ref([]);
 
-const letoltes = () => {
-  fetch('http://localhost:3000/cart')
-    .then(resp => resp.json())
-    .then(json => {
-      names.value = json;
-    })
-}
-
 onMounted(() => {
-  letoltes();
+  lekerdezes();
 })
 
 const del = (id) => {
   fetch("http://localhost:3000/cart/" + id, {
     method: "delete",
   })
-    .then(() => letoltes())
+    .then(() => lekerdezes())
 }
 
 const novekves = (id) => {
@@ -29,6 +21,14 @@ const novekves = (id) => {
     names.value[productIndex].quantity++;
     updateQuantity(id, names.value[productIndex].quantity);
   }
+}
+
+const lekerdezes = () => {
+  fetch('http://localhost:3000/cart')
+    .then(resp => resp.json())
+    .then(json => {
+      names.value = json;
+    })
 }
 
 const csokkent = (id) => {

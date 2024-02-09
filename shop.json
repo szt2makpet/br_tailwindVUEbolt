@@ -25,14 +25,14 @@
       "img": "no-image.png"
     },
     {
-      "id": "9ec3",
-      "name": "as",
-      "price": "1234"
-    },
-    {
-      "id": "b9fb",
+      "id": 4,
       "name": "alma",
       "price": "100"
+    },
+    {
+      "id": 4,
+      "name": "körte",
+      "price": "120"
     }
   ],
   "order": [
